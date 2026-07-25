@@ -1,70 +1,297 @@
-# Getting Started with Create React App
+# 💼 React Portfolio Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern and responsive **Portfolio Website** built using **React.js**, **React Router DOM**, and **Bootstrap 5**. This project showcases my profile, skills, projects, and contact details while demonstrating React fundamentals such as routing, reusable components, props, and dynamic rendering.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+- 🏠 Home Page
+- 👨‍💻 About Me
+- 📂 Projects Page
+- 📄 Dynamic Project Details
+- 📬 Contact Page
+- 📱 Responsive Design
+- ⚡ React Router Navigation
+- 🎨 Bootstrap 5 UI
+- 🔗 GitHub & Live Demo Buttons
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Tech Stack
 
-### `npm test`
+- React.js
+- React Router DOM
+- JavaScript (ES6+)
+- Bootstrap 5
+- HTML5
+- CSS3
+- Font Awesome
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 📁 Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```text
+src/
+│
+├── assets/
+│
+├── components/
+│   ├── Header.jsx
+│   ├── Footer.jsx
+│   └── Page.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx
+│   ├── SubProject.jsx
+│   └── Contact.jsx
+│
+├── data/
+│   └── projects.js
+│
+├── App.js
+├── Layout.jsx
+└── index.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📄 Pages
 
-### `npm run eject`
+- 🏠 Home
+- 👨‍💻 About
+- 📂 Projects
+- 📄 Project Details
+- 📬 Contact
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## ⚙️ Installation
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Clone the Repository
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+git clone https://github.com/iamvishushakti/React.git
+```
 
-## Learn More
+### Navigate to the Project
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```bash
+cd React
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Install Dependencies
 
-### Code Splitting
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Run the Development Server
 
-### Analyzing the Bundle Size
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+The application will be available at:
 
-### Making a Progressive Web App
+```text
+http://localhost:3000
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## 📚 What I Learned
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+During this project, I practiced and improved my knowledge of:
 
-### Deployment
+- React Components
+- JSX
+- Props
+- React Router DOM
+- Dynamic Routing
+- useParams()
+- Array Mapping
+- Responsive Design
+- Bootstrap 5
+- Font Awesome
+- Component Reusability
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 📂 GitHub Repository
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Repository**
+https://github.com/iamvishushakti/React
+
+**Project Folder**
+https://github.com/iamvishushakti/React/tree/main/portfolio
+
+> Replace **portfolio** with your actual folder name if it's different.
+
+---
+
+## 👨‍💻 Author
+
+**Vishal Kumar**
+
+Software Developer
+
+- GitHub: https://github.com/iamvishushakti
+- LinkedIn: *(Add your LinkedIn profile URL)*
+# 💼 React Portfolio Website
+
+A modern and responsive **Portfolio Website** built using **React.js**, **React Router DOM**, and **Bootstrap 5**. This project showcases my profile, skills, projects, and contact details while demonstrating React fundamentals such as routing, reusable components, props, and dynamic rendering.
+
+---
+
+## 🚀 Features
+
+- 🏠 Home Page
+- 👨‍💻 About Me
+- 📂 Projects Page
+- 📄 Dynamic Project Details
+- 📬 Contact Page
+- 📱 Responsive Design
+- ⚡ React Router Navigation
+- 🎨 Bootstrap 5 UI
+- 🔗 GitHub & Live Demo Buttons
+
+---
+
+## 🛠️ Tech Stack
+
+- React.js
+- React Router DOM
+- JavaScript (ES6+)
+- Bootstrap 5
+- HTML5
+- CSS3
+- Font Awesome
+
+---
+
+## 📁 Project Structure
+
+```text
+src/
+│
+├── assets/
+│
+├── components/
+│   ├── Header.jsx
+│   ├── Footer.jsx
+│   └── Page.jsx
+│
+├── pages/
+│   ├── Home.jsx
+│   ├── About.jsx
+│   ├── Projects.jsx
+│   ├── SubProject.jsx
+│   └── Contact.jsx
+│
+├── data/
+│   └── projects.js
+│
+├── App.js
+├── Layout.jsx
+└── index.js
+```
+
+---
+
+## 📄 Pages
+
+- 🏠 Home
+- 👨‍💻 About
+- 📂 Projects
+- 📄 Project Details
+- 📬 Contact
+
+---
+
+## ⚙️ Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/iamvishushakti/React.git
+```
+
+### Navigate to the Project
+
+```bash
+cd React
+```
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run the Development Server
+
+```bash
+npm start
+```
+
+The application will be available at:
+
+```text
+http://localhost:3000
+```
+
+---
+
+## 📚 What I Learned
+
+During this project, I practiced and improved my knowledge of:
+
+- React Components
+- JSX
+- Props
+- React Router DOM
+- Dynamic Routing
+- useParams()
+- Array Mapping
+- Responsive Design
+- Bootstrap 5
+- Font Awesome
+- Component Reusability
+
+---
+
+## 📂 GitHub Repository
+
+**Repository**
+https://github.com/iamvishushakti/React
+
+**Project Folder**
+https://github.com/iamvishushakti/React/tree/main/portfolio
+
+> Replace **portfolio** with your actual folder name if it's different.
+
+---
+
+## 👨‍💻 Author
+
+**Vishal Kumar**
+
+Software Developer
+
+- GitHub: https://github.com/iamvishushakti
+- LinkedIn: *(Add your LinkedIn profile URL)*
+
+---
+
+## ⭐ Support
+
+If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
+---
+
+## ⭐ Support
+
+If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
