@@ -141,6 +141,7 @@ Software Developer
 
 - GitHub: https://github.com/iamvishushakti
 - LinkedIn: *(Add your LinkedIn profile URL)*
+<<<<<<< HEAD
 # 💼 React Portfolio Website
 
 A modern and responsive **Portfolio Website** built using **React.js**, **React Router DOM**, and **Bootstrap 5**. This project showcases my profile, skills, projects, and contact details while demonstrating React fundamentals such as routing, reusable components, props, and dynamic rendering.
@@ -284,14 +285,19 @@ Software Developer
 
 - GitHub: https://github.com/iamvishushakti
 - LinkedIn: *(Add your LinkedIn profile URL)*
+=======
+>>>>>>> c3b71ee1600bafc02ec18863e43975d2068d5fbf
 
 ---
 
 ## ⭐ Support
 
 If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
+<<<<<<< HEAD
 ---
 
 ## ⭐ Support
 
 If you found this project helpful, consider giving it a **⭐ Star** on GitHub.
+=======
+>>>>>>> c3b71ee1600bafc02ec18863e43975d2068d5fbf
