@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { faClock } from "@fortawesome/free-regular-svg-icons";
 
 export default function Header() {
   return (
@@ -18,8 +17,12 @@ export default function Header() {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item">
               <Link className="nav-link" to="/">
-               <FontAwesomeIcon icon={faClock} /> 
-                Stop Time Out
+                Timer
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/stop-watch">
+                Stop Watch
               </Link>
             </li>
           </ul>

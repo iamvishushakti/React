@@ -1,23 +1,36 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 export default function StopTimeOut() {
 
-  const [count, setCount] = useState(0); // total seconds
-  const [stop, setStop] = useState(false); // total seconds
+  const getRemainingTime = useCallback(() => {
+    const endTime = Number(localStorage.getItem("stopWatch_endTime"));
+    if (!endTime || endTime <= 0) {
+      return 0;
+    }
+    return Math.max(0, Math.ceil((endTime - Date.now()) / 1000));
+  },[])
 
+  const [count, setCount] = useState(getRemainingTime);
+  
+  const changetimer = useCallback((settimevalue)=>{
+    const currentTime = Date.now();
+    const newEndTime = currentTime + settimevalue * 1000;
+
+    localStorage.setItem("stopWatch_endTime", newEndTime);
+    setCount(settimevalue);
+  },[]);
+
+  // Timer ko har second actual endTime ke according update karo
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((prev) => {
-        if (prev === 0 || stop) {
-          clearInterval(interval);
-          return prev;
-        }
-        return prev - 1;
-      });
+    const interval = setInterval((predata)=>{
+      const remaining = getRemainingTime();
+      setCount(remaining);
+      if (predata <= 0) {
+        localStorage.removeItem("stopWatch_endTime");
+        clearInterval(interval);
+      }
     }, 1000);
-
-    return () => clearInterval(interval);
-  }, [count, stop]);
+  }, []);
 
   return (
     <div
@@ -34,43 +47,24 @@ export default function StopTimeOut() {
         }}
       >
         <div className="card-body text-center p-5">
-          <h1 className="fw-bold text-primary mb-4">
-            Countdown Timer
-          </h1>
 
           <div
-            className="bg-warning text-white py-4 rounded-4 mb-4 shadow-sm"
-            style={{ fontSize: "2.5rem", fontWeight: "bold" }}
+            className="bg-secondary text-white py-4 rounded-4 mb-4 shadow-sm"
+            style={{
+              fontSize: "2.5rem",
+              fontWeight: "bold",
+            }}
           >
-            {String(Math.floor(count / 60)).padStart(2, "0")} : {String(count % 60).padStart(2, "0")}
+            {String(Math.floor(count / 60)).padStart(2, "0")} :{" "}
+            {String(count % 60).padStart(2, "0")}
           </div>
 
           <div className="row g-3">
-            <div className="col-6">
-              <button
-                className="btn btn-outline-primary w-100"
-                onClick={() => setStop(false)}
-              >
-                Start
-              </button>
-            </div>
-
-            <div className="col-6">
-              <button
-                className="btn btn-outline-primary w-100"
-                onClick={() => setStop(true)}
-              >
-                Stop
-              </button>
-            </div>
 
             <div className="col-3">
               <button
                 className="btn btn-outline-primary w-100"
-                onClick={() => {
-                  setStop(false);
-                  setCount(15);
-                }}
+                onClick={() => changetimer(15)}
               >
                 15 Sec
               </button>
@@ -79,10 +73,7 @@ export default function StopTimeOut() {
             <div className="col-3">
               <button
                 className="btn btn-outline-success w-100"
-                onClick={() => {
-                  setStop(false);
-                  setCount(30);
-                }}
+                onClick={() => changetimer(30)}
               >
                 30 Sec
               </button>
@@ -91,10 +82,7 @@ export default function StopTimeOut() {
             <div className="col-3">
               <button
                 className="btn btn-outline-warning w-100"
-                onClick={() => {
-                  setStop(false);
-                  setCount(60);
-                }}
+                onClick={() => changetimer(60)}
               >
                 1 Min
               </button>
@@ -103,10 +91,7 @@ export default function StopTimeOut() {
             <div className="col-3">
               <button
                 className="btn btn-outline-danger w-100"
-                onClick={() => {
-                  setStop(false);
-                  setCount(60 * 5);
-                }}
+                onClick={() => changetimer(60 * 5)}
               >
                 5 Min
               </button>
@@ -115,10 +100,7 @@ export default function StopTimeOut() {
             <div className="col-3">
               <button
                 className="btn btn-outline-info w-100"
-                onClick={() => {
-                  setStop(false);
-                  setCount(60 * 10);
-                }}
+                onClick={() => changetimer(60 * 10)}
               >
                 10 Min
               </button>
@@ -127,10 +109,7 @@ export default function StopTimeOut() {
             <div className="col-3">
               <button
                 className="btn btn-outline-secondary w-100"
-                onClick={() => {
-                  setStop(false);
-                  setCount(60 * 15);
-                }}
+                onClick={() => changetimer(60 * 15)}
               >
                 15 Min
               </button>
@@ -139,10 +118,7 @@ export default function StopTimeOut() {
             <div className="col-3">
               <button
                 className="btn btn-primary w-100 fw-bold"
-                onClick={() => {
-                  setStop(false);
-                  setCount(60 * 20);
-                }}
+                onClick={() => changetimer(60 * 20)}
               >
                 20 Min
               </button>
@@ -151,14 +127,12 @@ export default function StopTimeOut() {
             <div className="col-3">
               <button
                 className="btn btn-primary w-100 fw-bold"
-                onClick={() => {
-                  setStop(false);
-                  setCount(60 * 30);
-                }}
+                onClick={() => changetimer(60 * 30)}
               >
                 30 Min
               </button>
             </div>
+
           </div>
         </div>
       </div>
