@@ -1,6 +1,5 @@
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
 import Layout from "./Layout"
-import projects from "./data/ptojectData"
 
 import StopTimeOut from "./components/pages/StopTimeOut";
 import StopWatch from "./components/pages/StopWatch";
