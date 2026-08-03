@@ -1,0 +1,58 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+
+/* Todo Tasks Scroll Area */
+
+.to-do-subtask {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* Firefox */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent;
+}
+
+
+/* Chrome / Edge / Safari */
+
+.to-do-subtask::-webkit-scrollbar {
+    width: 4px;
+}
+
+.to-do-subtask::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.to-do-subtask::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 10px;
+}
+
+
+/* Mouse task section par hone par scrollbar show */
+
+.to-do-subtask:hover {
+    scrollbar-color: #999 transparent;
+}
+
+.to-do-subtask:hover::-webkit-scrollbar-thumb {
+    background: #999;
+}
+
+
+/* Main Todo Card */
+
+.card-body.to-do {
+    border: 1px solid #999;
+    border-radius: 20px;
+    padding: 10px;
+}
