@@ -1,0 +1,381 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    background-image: linear-gradient( rgba(20, 15, 35, 0.18), rgba(20, 15, 35, 0.18)), url("../images/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/* =====================================================
+   NAVBAR
+===================================================== */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    background: transparent !important;
+}
+
+
+/* =====================================================
+   GLASS NAVBAR CONTAINER
+===================================================== */
+
+.navbar>.container {
+    width: 92%;
+    position: relative;
+    max-width: 1650px;
+    background: rgba(255, 255, 255, 0.20);
+    /* Glass Effect */
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    /* Border */
+    border: 1px solid rgba(255, 255, 255, 0.55);
+    border-radius: 22px;
+    /* Shadow + Inner Glow */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.80), inset 0 -1px 1px rgba(255, 255, 255, 0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+/* =====================================================
+   GLASS LIGHT REFLECTION
+===================================================== */
+
+.navbar>.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient( to bottom, rgba(255, 255, 255, 0.35), rgba(255, 255, 255, 0));
+    pointer-events: none;
+    z-index: 0;
+}
+
+
+/* Navbar content above glass reflection */
+
+.navbar>.container>* {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =====================================================
+   LOGO
+===================================================== */
+
+.navbar-brand {
+    color: #212529 !important;
+    font-size: 30px !important;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+    color: #6f42c1 !important;
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   NAV MENU
+===================================================== */
+
+.navbar-nav {
+    align-items: center;
+}
+
+.nav-link {
+    position: relative;
+    color: #212529 !important;
+    font-size: 17px;
+    font-weight: 500;
+    padding-left: 12px !important;
+    padding-right: 12px !important;
+    transition: all 0.3s ease;
+}
+
+
+/* Hover */
+
+.nav-link:hover {
+    color: #6f42c1 !important;
+}
+
+
+/* Underline */
+
+.nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 3px;
+    width: 0;
+    height: 2px;
+    background: #6f42c1;
+    border-radius: 10px;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+}
+
+
+/* Hover underline */
+
+.nav-link:hover::after {
+    width: 55%;
+}
+
+
+/* =====================================================
+   SIGN IN BUTTON
+===================================================== */
+
+.navbar .btn-dark {
+    border: none;
+    background: rgba(25, 29, 33, 0.95);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px 25px;
+    border-radius: 50px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.navbar .btn-dark:hover {
+    background: #6f42c1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 22px rgba(111, 66, 193, 0.30);
+}
+
+
+/* =====================================================
+   MOBILE TOGGLER
+===================================================== */
+
+.navbar-toggler {
+    border: none !important;
+    box-shadow: none !important;
+    padding: 5px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+
+/* =====================================================
+   MAIN CONTENT
+===================================================== */
+
+.blog-container {
+    min-height: 100vh;
+    margin-top: 50px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+
+/* =====================================================
+   BLOG CARD
+===================================================== */
+
+.blog-card {
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    border-radius: 24px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =====================================================
+   BLOG IMAGE
+===================================================== */
+
+.blog-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.blog-card:hover img {
+    transform: scale(1.04);
+}
+
+
+/* =====================================================
+   BLOG CONTENT
+===================================================== */
+
+.blog-content {
+    padding: 25px;
+}
+
+.blog-content h3 {
+    margin-bottom: 10px;
+    color: #212529;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.blog-content p {
+    margin-bottom: 15px;
+    color: #5f6368;
+    line-height: 1.7;
+}
+
+
+/* =====================================================
+   CATEGORY
+===================================================== */
+
+.blog-category {
+    display: inline-block;
+    padding: 6px 14px;
+    margin-bottom: 12px;
+    border-radius: 50px;
+    background: rgba(111, 66, 193, 0.10);
+    color: #6f42c1;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   READ MORE
+===================================================== */
+
+.read-more {
+    color: #6f42c1;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    color: #4f2d8f;
+    letter-spacing: 0.3px;
+}
+
+
+/* =====================================================
+   SECTION TITLE
+===================================================== */
+
+.section-title {
+    margin-bottom: 30px;
+    color: #212529;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+
+/* =====================================================
+   GENERAL GLASS BOX
+===================================================== */
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.50);
+    border-radius: 25px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.07), inset 0 1px 1px rgba(255, 255, 255, 0.60);
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991px) {
+    .navbar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .navbar>.container {
+        border-radius: 20px;
+    }
+    .navbar-nav {
+        align-items: flex-start;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    .nav-link {
+        padding-left: 10px !important;
+    }
+    .nav-link::after {
+        left: 0;
+        transform: none;
+    }
+    .nav-link:hover::after {
+        width: 40px;
+    }
+    .navbar .btn-dark {
+        margin-top: 10px;
+    }
+    .blog-container {
+        margin-top: 100px;
+        padding: 30px 15px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 576px) {
+    .navbar {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+    }
+    .navbar>.container {
+        padding: 10px 15px !important;
+        border-radius: 18px;
+    }
+    .navbar-brand {
+        font-size: 24px !important;
+    }
+    .blog-container {
+        margin-top: 90px;
+        padding: 25px 10px;
+    }
+    .blog-card {
+        border-radius: 18px;
+    }
+    .blog-card img {
+        height: 190px;
+    }
+    .section-title {
+        font-size: 26px;
+    }
+}
