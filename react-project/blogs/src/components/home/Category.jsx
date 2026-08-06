@@ -1,6 +1,7 @@
 import "../../assets/css/Category.css"
-export default function Category() {
-
+import { Link } from "react-router-dom";
+export default function Category(props) {
+    const CategoryType = props?.CategoryType??'';
     const categories = [
         "Trending",
         "News",
@@ -23,12 +24,13 @@ export default function Category() {
 
             {
                 categories.map((category, index) => (
-                    <button
+                    <Link
                         key={index}
-                        className="category-btn"
+                        className= {category===CategoryType?'active category-btn':'category-btn'}
+                        to={`/category/${category}`}
                     >
                         {category}
-                    </button>
+                    </Link>
                 ))
             }
 
